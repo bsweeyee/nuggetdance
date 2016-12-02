@@ -10,7 +10,11 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>/// create controller, debug and demo
+
+instance_create(0, 0, obj_controller);
+instance_create(0, 0, obj_debug);
+instance_create(room_width/2, room_height/3, obj_demo);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -52,7 +56,7 @@
   </views>
   <instances>
     <instance objName="obj_player" x="544" y="448" name="inst_8DB6F49A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_move" x="192" y="96" name="inst_1544BD86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_move" x="0" y="0" name="inst_FC44FCC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

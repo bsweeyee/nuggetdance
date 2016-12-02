@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_ball</sprite>
     <sprite>sprites\spr_player_arm_right3</sprite>
     <sprite>sprites\spr_player_arm_right4</sprite>
     <sprite>sprites\spr_player_arm_right5</sprite>
@@ -27,18 +26,19 @@
     <script>scripts\generateNumMoves.gml</script>
     <script>scripts\Chance.gml</script>
     <script>scripts\checkMoveType.gml</script>
-    <script>scripts\spriteIndex.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="controllers">
+      <object>objects\obj_player_move</object>
       <object>objects\obj_debug</object>
     </objects>
     <object>objects\obj_demo</object>
+    <object>objects\obj_demo_arm_left</object>
+    <object>objects\obj_demo_arm_right</object>
     <object>objects\obj_controller</object>
     <object>objects\obj_player_arm_right</object>
-    <object>objects\obj_player_move</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_player_arm_left</object>
+    <object>objects\obj_player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_room</room>

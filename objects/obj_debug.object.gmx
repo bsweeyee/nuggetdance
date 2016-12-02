@@ -117,6 +117,37 @@ game_end();
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// print count of object demo
+
+if (!global.global_release)    {
+    if (instance_exists(obj_demo))  {
+        draw_text(x_debug + 10, y_debug+10, "count: " + string(obj_demo.count));
+        draw_text(x_debug + 10, y_debug +30, "left: " +  string(global.demoMoveLeft[obj_demo.count]));
+        draw_text(x_debug + 90, y_debug +30, "right: " + string(global.demoMoveRight[obj_demo.count]));
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
