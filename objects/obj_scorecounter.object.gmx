@@ -106,6 +106,7 @@ if(resetScore){
 draw_text(x,y,string(global.accuracy) + "%");
 draw_text(x,y+20,"hits: " + string(global.hits));
 draw_text(x,y+40,"total: " + string(global.totalmoves));
+draw_text(x,y+60,"count: " + string(global.count));
 
 </string>
           </argument>
