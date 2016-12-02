@@ -51,7 +51,7 @@ current = 0;
             <kind>1</kind>
             <string>///read arm position
 if (instance_exists(obj_demo)) {
-    switch(global.demoMoveLeft[obj_demo.count]){
+    switch(global.demoMoveRight[obj_demo.count]){
         case 0:
             sprite_index = spr_player_arm_right0;
             break;

@@ -5,7 +5,7 @@ var moves = 0;
 
 switch (difficulty) {
     case 0:
-    moves = irandom_range(8, 12);
+    moves = irandom_range(3, 5);
     break;
     
     case 1:

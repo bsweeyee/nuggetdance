@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// alarms and booleans and count;
+            <string>/// alarms and booleans and count
 
 count = 0;
 alarm[0] = room_speed;
@@ -55,15 +55,19 @@ messageRight = "nothing";
             <string>/// generate list
 
 numOfMoves = generateNumMoves(global.difficulty);
+prevLeft = -1;
+prevRight = -1;
 
 for (var i=0; i&lt;numOfMoves; i++)    {
     var left = 0;
     var right = 0;
 
-    while (left == right)   {
+    while ((left == 0 &amp;&amp; right == 0) || (prevLeft == left &amp;&amp; prevRight == right))   {
         left = generateMoveList(global.difficulty, numOfMoves);
         right = generateMoveList(global.difficulty, numOfMoves);
     }
+    prevLeft = left;
+    prevRight = right;
     
     global.demoMoveLeft[i] = left;
     global.demoMoveRight[i] = right;
@@ -151,7 +155,8 @@ if (count == numOfMoves-1)    {
     with (left_arm) {
         instance_destroy();
     }
-    instance_create(x, y, obj_Ready);
+    instance_create(x, y, obj_timer);
+    global.setNum += 1;
     instance_destroy();
 }
 </string>

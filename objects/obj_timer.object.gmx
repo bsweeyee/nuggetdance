@@ -25,39 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// view position
-x_debug = view_xview[0] + 10;
-y_debug = view_yview[0] + 10;
+            <string>//timer value
 
- 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// global release
-global.global_release = false;
+message = "YOUR MOVE!";
+draw = true;
+
+alarm[0] = room_speed;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -74,44 +53,35 @@ global.global_release = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// debug keys
+            <string>/// when alarm rings, spawn object
 
-var kPrev, kNext, kRestart, kExit
-
-kPrev = keyboard_check_pressed(ord('O'));
-kNext = keyboard_check_pressed(ord('P'));
-
-kRestart = keyboard_check_pressed(ord('R'));
-
-kExit = keyboard_check_pressed(vk_escape);
-
-if (!global.global_release){
-
-// Restart application
-
-if (kRestart)
-game_restart();
-
-
-//Room traversal
-
-if (kPrev)
-if (room == room_first)
-room_goto(room_last);
-else
-room_goto_previous();
-
-if (kNext)
-if (room == room_last)
-room_goto(room_first);
-else
-room_goto_next();
-
-//close application
-if (kExit)
-game_end();
-
-}
+instance_create(room_width/2, room_height/3, obj_Ready);
+instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// change draw to false
+draw = false;
+alarm[1] = room_speed * 5;
 </string>
           </argument>
         </arguments>
@@ -134,18 +104,11 @@ game_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// print count of object demo
+            <string>///draw 
 
-if (!global.global_release)    {
-    if (instance_exists(obj_demo))  {
-        draw_text(x_debug + 10, y_debug+10, "count: " + string(obj_demo.count));
-        draw_text(x_debug + 10, y_debug +30, "left: " +  string(global.demoMoveLeft[obj_demo.count]));
-        draw_text(x_debug + 90, y_debug +30, "right: " + string(global.demoMoveRight[obj_demo.count]));
-    }
-    
-    if (instance_exists(obj_timer)) {
-        draw_text(obj_timer.x, obj_timer.y, obj_timer.alarm[1]);
-    }
+if (draw)   {
+    draw_set_halign(fa_center);
+    draw_text(x, y, message);
 }
 </string>
           </argument>
