@@ -28,7 +28,7 @@
             <string>///initialize parameters
 global.playerMoveLeft[0] = 0;
 global.playerMoveRight[0] = 0;
-for(i=0; i&lt;20; i++){
+for(i=0; i&lt; array_length_1d(global.demoMoveRight); i++){
     global.playerMoveLeft[i] = 0;
     global.playerMoveRight[i] = 0;
 }
@@ -98,6 +98,10 @@ if not is_changed {
     }
 }
 
+if global.numPlayerMoves == array_length_1d(global.demoMoveRight){
+    instance_destroy();
+}
+
 </string>
           </argument>
         </arguments>
@@ -121,15 +125,17 @@ if not is_changed {
           <argument>
             <kind>1</kind>
             <string>///draw list of movements
+/*
 Y = 20
 offset = 0;
 i = 0;
-for(i=0; i&lt; 15; i++){
+for(i=0; i&lt; array_length_1d(global.demoMoveRight); i++){
 draw_text(x+offset, y, global.playerMoveLeft[i]);
 draw_text(x+offset, y+Y, global.playerMoveRight[i]);
 offset +=20;
 }
 draw_text(x, y+Y+Y, is_changed);
+*/
 </string>
           </argument>
         </arguments>
