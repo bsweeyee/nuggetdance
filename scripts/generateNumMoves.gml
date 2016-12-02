@@ -9,6 +9,10 @@ switch (difficulty) {
     break;
     
     case 1:
+    moves = irandom_range(3, 5);
+    break;
+    
+    case 2:
     moves = irandom_range(5, 8);
     break;
 }

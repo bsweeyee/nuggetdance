@@ -35,6 +35,7 @@
     <script>scripts\generateNumMoves.gml</script>
     <script>scripts\Chance.gml</script>
     <script>scripts\checkMoveType.gml</script>
+    <script>scripts\generateDemoSpeed.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="controllers">

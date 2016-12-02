@@ -28,7 +28,7 @@
             <string>/// alarms and booleans and count
 
 count = 0;
-alarm[0] = room_speed;
+alarm[0] = generateDemoSpeed(global.difficulty);
 
 messageLeft = "nothing";
 messageRight = "nothing";
@@ -123,7 +123,7 @@ left_arm = instance_create(x, y, obj_demo_arm_left);
             <kind>1</kind>
             <string>/// print / show image and set alarm to 60 again
 count += 1;
-alarm[0] = room_speed;
+alarm[0] = generateDemoSpeed(global.difficulty);
 </string>
           </argument>
         </arguments>

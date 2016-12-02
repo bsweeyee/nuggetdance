@@ -37,7 +37,7 @@ global.numPlayerMoves = 0;
 global.spawnDemo = false;
 global.setNum = 1;
 
-global.setCount = 0;
+global.level = 0;
 
 
 </string>
