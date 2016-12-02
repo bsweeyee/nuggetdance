@@ -5,7 +5,21 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_ball</sprite>
+    <sprite>sprites\spr_player_arm_right3</sprite>
+    <sprite>sprites\spr_player_arm_right4</sprite>
+    <sprite>sprites\spr_player_arm_right5</sprite>
+    <sprite>sprites\spr_player_arm_right6</sprite>
+    <sprite>sprites\spr_player_arm_right7</sprite>
+    <sprite>sprites\spr_player_arm_right8</sprite>
+    <sprite>sprites\spr_player_arm_right9</sprite>
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player_arm_left0</sprite>
+    <sprite>sprites\spr_player_arm_right0</sprite>
+    <sprite>sprites\spr_player_arm_right1</sprite>
+    <sprite>sprites\spr_player_arm_right2</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -21,8 +35,13 @@
     </objects>
     <object>objects\obj_demo</object>
     <object>objects\obj_controller</object>
+    <object>objects\obj_player_arm_right</object>
+    <object>objects\obj_player_move</object>
+    <object>objects\obj_player</object>
+    <object>objects\obj_player_arm_left</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\test_room</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
