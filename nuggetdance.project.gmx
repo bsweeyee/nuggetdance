@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player_legs</sprite>
     <sprite>sprites\spr_player_arm_right3</sprite>
     <sprite>sprites\spr_player_arm_right4</sprite>
     <sprite>sprites\spr_player_arm_right5</sprite>
@@ -49,8 +50,9 @@
     <object>objects\obj_demo</object>
     <object>objects\obj_demo_arm_left</object>
     <object>objects\obj_demo_arm_right</object>
-    <object>objects\obj_player_arm_right</object>
     <object>objects\obj_player_arm_left</object>
+    <object>objects\obj_player_arm_right</object>
+    <object>objects\obj_player_legs</object>
     <object>objects\obj_player</object>
     <objects name="texts">
       <object>objects\obj_score</object>

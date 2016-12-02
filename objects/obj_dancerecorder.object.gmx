@@ -94,11 +94,11 @@ if not is_changed {
         alarm[0] = room_speed/2;
     }
 }
-
+/*
 if global.numPlayerMoves == array_length_1d(global.demoMoveRight){
     instance_destroy();
 }
-
+*/
 </string>
           </argument>
         </arguments>
