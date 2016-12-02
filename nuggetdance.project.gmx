@@ -5,9 +5,28 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_ball</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\generateMoveList.gml</script>
+    <script>scripts\generateNumMoves.gml</script>
+    <script>scripts\Chance.gml</script>
+    <script>scripts\checkMoveType.gml</script>
+    <script>scripts\spriteIndex.gml</script>
+  </scripts>
+  <objects name="objects">
+    <objects name="controllers">
+      <object>objects\obj_debug</object>
+    </objects>
+    <object>objects\obj_demo</object>
+    <object>objects\obj_controller</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_test</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
