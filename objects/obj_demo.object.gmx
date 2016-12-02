@@ -96,9 +96,10 @@ for (var i=0; i&lt;global.numDemoMoves; i++)    {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///load arms
+            <string>///load arms and legs
 right_arm = instance_create(x, y, obj_demo_arm_right);
 left_arm = instance_create(x, y, obj_demo_arm_left);
+legs = instance_create(x, y, obj_player_legs);
 </string>
           </argument>
         </arguments>
@@ -153,6 +154,10 @@ if (global.count == global.numDemoMoves)    {
     }
     
     with (left_arm) {
+        instance_destroy();
+    }
+    
+    with (legs) {
         instance_destroy();
     }
     instance_create(x, y, obj_timer);

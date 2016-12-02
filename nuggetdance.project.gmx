@@ -59,6 +59,8 @@
       <object>objects\obj_Ready</object>
       <object>objects\obj_timer</object>
     </objects>
+    <object>objects\obj_Close</object>
+    <object>objects\obj_Choices</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_room</room>
