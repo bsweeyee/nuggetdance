@@ -53,6 +53,17 @@ current_right = 0;
           <argument>
             <kind>1</kind>
             <string>///record dance move
+
+if(global.player_move_num_left + global.player_move_num_right != 0){
+    current_left = global.player_move_num_left;
+    current_right = global.player_move_num_right;
+    if (current_left == global.demoMoveLeft[global.count])
+        and (current_right == global.demoMoveRight[global.count])
+            global.hits += 1;
+}
+is_changed = false;
+
+/* sequential scoring
 if(global.player_move_num_left + global.player_move_num_right != 0){
     current_left = global.player_move_num_left;
     current_right = global.player_move_num_right;
@@ -64,6 +75,7 @@ if(global.player_move_num_left + global.player_move_num_right != 0){
     global.numPlayerMoves += 1;
 }
 is_changed = false;
+*/
 </string>
           </argument>
         </arguments>
