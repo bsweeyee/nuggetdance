@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>///initialise parameters
 global.hits = 0;
+global.totalmoves = 0;
+global.accuracy = 0;
+resetScore = false;
 </string>
           </argument>
         </arguments>
@@ -49,7 +52,61 @@ global.hits = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///generate score when set 5 is complete
+            <string>///update accuracy
+global.accuracy = global.hits/global.totalmoves * 100;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///reset score
+if(resetScore){
+    global.hits = 0;
+    global.totalmoves = 0;
+    resetScore = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///draw accuracy, hits, total
+draw_text(x,y,string(global.accuracy) + "%");
+draw_text(x,y+20,"hits: " + string(global.hits));
+draw_text(x,y+40,"total: " + string(global.totalmoves));
+
 </string>
           </argument>
         </arguments>

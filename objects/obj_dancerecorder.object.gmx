@@ -28,6 +28,8 @@
             <string>///initialize parameters
 is_changed = false;
 global.numPlayerMoves = 0;
+current_left = 0
+current_right = 0;
 </string>
           </argument>
         </arguments>
@@ -52,9 +54,13 @@ global.numPlayerMoves = 0;
             <kind>1</kind>
             <string>///record dance move
 if(global.player_move_num_left + global.player_move_num_right != 0){
-    if (global.playerMoveLeft[global.numPlayerMoves] == global.demoMoveLeft[global.numPlayerMoves])
-    and (global.playerMoveRight[global.numPlayerMoves] == global.demoMoveRight[global.numPlayerMoves])
-        global.hits += 1;
+    current_left = global.player_move_num_left;
+    current_right = global.player_move_num_right;
+    if(global.numPlayerMoves &lt; global.numDemoMoves){
+        if (current_left == global.demoMoveLeft[global.numPlayerMoves])
+        and (current_right == global.demoMoveRight[global.numPlayerMoves])
+            global.hits += 1;
+    }
     global.numPlayerMoves += 1;
 }
 is_changed = false;
@@ -85,7 +91,7 @@ if not is_changed {
     if (global.player_move_num_left + global.player_move_num_right != 0)
      and (global.player_move_num_left != current_left  or global.player_move_num_right != current_right) {
         is_changed = true;
-        alarm[0] = room_speed/3;
+        alarm[0] = room_speed/2;
     }
 }
 
