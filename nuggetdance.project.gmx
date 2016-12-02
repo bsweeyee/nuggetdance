@@ -6,19 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player_arm_left0</sprite>
-    <sprite>sprites\spr_player_arm_left9</sprite>
-    <sprite>sprites\spr_player_arm_left1</sprite>
-    <sprite>sprites\spr_player_arm_left2</sprite>
-    <sprite>sprites\spr_player_arm_left3</sprite>
-    <sprite>sprites\spr_player_arm_left4</sprite>
-    <sprite>sprites\spr_player_arm_left5</sprite>
-    <sprite>sprites\spr_player_arm_left6</sprite>
-    <sprite>sprites\spr_player_arm_left7</sprite>
-    <sprite>sprites\spr_player_arm_left8</sprite>
-    <sprite>sprites\spr_player_arm_right0</sprite>
-    <sprite>sprites\spr_player_arm_right1</sprite>
-    <sprite>sprites\spr_player_arm_right2</sprite>
+    <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_player_arm_right3</sprite>
     <sprite>sprites\spr_player_arm_right4</sprite>
     <sprite>sprites\spr_player_arm_right5</sprite>
@@ -26,7 +14,10 @@
     <sprite>sprites\spr_player_arm_right7</sprite>
     <sprite>sprites\spr_player_arm_right8</sprite>
     <sprite>sprites\spr_player_arm_right9</sprite>
-    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player_arm_left0</sprite>
+    <sprite>sprites\spr_player_arm_right0</sprite>
+    <sprite>sprites\spr_player_arm_right1</sprite>
+    <sprite>sprites\spr_player_arm_right2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -40,14 +31,15 @@
     <objects name="controllers">
       <object>objects\obj_player_move</object>
       <object>objects\obj_debug</object>
+      <object>objects\obj_controller</object>
     </objects>
     <object>objects\obj_demo</object>
     <object>objects\obj_demo_arm_left</object>
     <object>objects\obj_demo_arm_right</object>
-    <object>objects\obj_controller</object>
     <object>objects\obj_player_arm_right</object>
     <object>objects\obj_player_arm_left</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_Ready</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_room</room>

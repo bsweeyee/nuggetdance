@@ -94,7 +94,7 @@ for (var i=0; i&lt;numOfMoves; i++)    {
             <kind>1</kind>
             <string>///load arms
 right_arm = instance_create(x, y, obj_demo_arm_right);
-//instance_create(x, y, obj_demo_arm_left);
+left_arm = instance_create(x, y, obj_demo_arm_left);
 </string>
           </argument>
         </arguments>
@@ -147,6 +147,11 @@ if (count == numOfMoves-1)    {
     with (right_arm) {
         instance_destroy();
     }
+    
+    with (left_arm) {
+        instance_destroy();
+    }
+    instance_create(x, y, obj_Ready);
     instance_destroy();
 }
 </string>
