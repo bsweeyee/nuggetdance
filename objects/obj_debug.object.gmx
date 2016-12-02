@@ -85,8 +85,8 @@ kRestart = keyboard_check_pressed(ord('R'));
 
 kExit = keyboard_check_pressed(vk_escape);
 
-kIncreaseDifficulty = keyboard_check_pressed(ord('U'));
-kDecreaseDifficulty = keyboard_check_pressed(ord('J'));
+kIncreaseSetNum = keyboard_check_pressed(ord('U'));
+kDecreaseSetNum = keyboard_check_pressed(ord('J'));
 
 kChangeAccuracy = keyboard_check_pressed(ord('M'));
 
@@ -115,16 +115,12 @@ else
 room_goto_next();
 
 //toggle difficulty
-if (kIncreaseDifficulty)    {
-    if (global.difficulty &lt; 2)   {
-        global.difficulty += 1;
-    }
+if (kIncreaseSetNum)    {
+    global.setNum += 1;
 } 
 
-if (kDecreaseDifficulty)    {
-    if (global.difficulty &gt; 1) {
-        global.difficulty -= 1;
-    }
+if (kDecreaseSetNum)    {
+    global.setNum -= 1;
 }
 
 if (kChangeAccuracy)    {
@@ -162,7 +158,7 @@ game_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// print count of object demo
+            <string>/// print debug messsages
 
 if (!global.global_release)    {
     draw_set_halign(fa_left);
@@ -173,13 +169,14 @@ if (!global.global_release)    {
     }
     
     if (instance_exists(obj_timer)) {
-        draw_text(obj_timer.x, obj_timer.y, obj_timer.alarm[1]);
+        //draw_text(obj_timer.x, obj_timer.y, obj_timer.alarm[1]);
     }
     
     if (instance_exists(obj_controller))    {
-        draw_text(x_debug + 10, y_debug + 50, "difficulty: " + string(global.difficulty));
-        
+        draw_text(x_debug + 10, y_debug + 50, "difficulty: " + string(global.difficulty));   
     }
+    
+    draw_text(x_debug + 10, y_debug + 70, "set number: " + string(global.setNum));
 }
 </string>
           </argument>

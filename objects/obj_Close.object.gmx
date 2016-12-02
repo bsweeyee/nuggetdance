@@ -31,6 +31,8 @@ top_left = room_width;
 
 close_1 = false;
 close_2 = false;
+
+closed = false;
 </string>
           </argument>
         </arguments>
@@ -80,17 +82,18 @@ room_goto(rm_gameOver);
             <string>/// increase right bottom
 if (right_bottom &lt;= room_width/2)   {
     right_bottom += 20;
-    close_1 = true;
 }
 
 // decrease top left
 if (top_left &gt;= room_width/2)   {
     top_left -= 20;
-    close_2 = true;
 }
 
-if (close_1 and close_2) {
-    alarm[0] = room_speed;
+if (top_left &lt;= room_width/2 and right_bottom &gt;= room_width/2) {
+    if (!closed) {
+        alarm[0] = room_speed;
+    }
+    closed = true;
 }
 </string>
           </argument>
