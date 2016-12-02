@@ -31,12 +31,74 @@ scoreString = "Your Score"
 fail = "SO CLOSE";
 pass = "CLOSE ENOUGH";
 
+getReady = "Get ready for the next level!";
+
+isDrawScoreString = true;
 isDrawScore = false;
 isDrawVerdict = false;
+isDrawNext = false;
 
 alarm[0] = room_speed;
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// create object ready and destroy itself
+instance_create(x, y+100, obj_Ready);
+instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///check if fail or pass and change rooms depending on which state
+
+if (global.accuracy &gt; 50)   {
+    isDrawNext = true;
+    isDrawScoreString = false;
+    isDrawScore = false;
+    isDrawVerdict = false;
+    alarm[3] = room_speed;
+} else  {
+    // go to gameover room
+}
 </string>
           </argument>
         </arguments>
@@ -63,6 +125,10 @@ alarm[0] = room_speed;
 isDrawVerdict = true;
 
 //play sound for pass here
+
+
+//set alarm for next level
+alarm[2] = room_speed * 3;
 </string>
           </argument>
         </arguments>
@@ -113,8 +179,10 @@ alarm[1] = room_speed*1.5;
           <argument>
             <kind>1</kind>
             <string>
-draw_set_halign(fa_center);
-draw_text(x, y, scoreString);
+if (isDrawScoreString)  {
+    draw_set_halign(fa_center);
+    draw_text(x, y, scoreString);
+}
 
 if (isDrawScore)    {
     draw_set_halign(fa_center);
@@ -128,6 +196,11 @@ if (isDrawVerdict)  {
     } else  {
         draw_text(x, y + 60, fail);
     }
+}
+
+if (isDrawNext) {
+    draw_set_halign(fa_center);
+    draw_text(x, y + 100, getReady);   
 }
 </string>
           </argument>

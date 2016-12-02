@@ -126,7 +126,7 @@ if (kDecreaseDifficulty)    {
 }
 
 if (kChangeAccuracy)    {
-    global.accuracy *= -1;
+    global.accuracy = 100;
 }
 
 //close application
@@ -161,9 +161,9 @@ game_end();
 if (!global.global_release)    {
     draw_set_halign(fa_left);
     if (instance_exists(obj_demo))  {
-        draw_text(x_debug + 10, y_debug+10, "count: " + string(obj_demo.count));
-        draw_text(x_debug + 10, y_debug +30, "left: " +  string(global.demoMoveLeft[obj_demo.count]));
-        draw_text(x_debug + 90, y_debug +30, "right: " + string(global.demoMoveRight[obj_demo.count]));
+        draw_text(x_debug + 10, y_debug+10, "count: " + string(global.count));
+        draw_text(x_debug + 10, y_debug +30, "left: " +  string(global.demoMoveLeft[global.count]));
+        draw_text(x_debug + 90, y_debug +30, "right: " + string(global.demoMoveRight[global.count]));
     }
     
     if (instance_exists(obj_timer)) {

@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>/// alarms and booleans and count
 
-count = 0;
 alarm[0] = generateDemoSpeed(global.difficulty);
 
 messageLeft = "nothing";
@@ -123,7 +122,7 @@ left_arm = instance_create(x, y, obj_demo_arm_left);
           <argument>
             <kind>1</kind>
             <string>/// print / show image and set alarm to 60 again
-count += 1;
+global.count += 1;
 alarm[0] = generateDemoSpeed(global.difficulty);
 </string>
           </argument>
@@ -148,7 +147,7 @@ alarm[0] = generateDemoSpeed(global.difficulty);
           <argument>
             <kind>1</kind>
             <string>///when count is maximum, destroy
-if (count == global.numDemoMoves)    {
+if (global.count == global.numDemoMoves)    {
     with (right_arm) {
         instance_destroy();
     }

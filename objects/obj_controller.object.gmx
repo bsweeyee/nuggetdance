@@ -32,14 +32,14 @@ global.difficulty = 0;
 global.demoMoveLeft[0] = 0;
 global.demoMoveRight[0] = 0;
 global.numDemoMoves = 0;
+global.count = 0;
+
 global.numPlayerMoves = 0;
 
 global.spawnDemo = false;
 global.setNum = 1;
 
 global.level = 0;
-
-global.pause = false;
 </string>
           </argument>
         </arguments>
