@@ -87,6 +87,7 @@ randomize();
             <string>///when spawn demo is true, create demo instance
 if (global.spawnDemo)   {
     instance_create(room_width/2, room_height/3, obj_demo);
+    instance_create(room_width/2, room_height/3 + 100, obj_dancerecorder);
     global.spawnDemo = false;
 }
 </string>
