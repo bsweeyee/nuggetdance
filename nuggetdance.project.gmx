@@ -63,8 +63,8 @@
     <object>objects\obj_Choices</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\test_room</room>
     <room>rooms\rm_gameOver</room>
+    <room>rooms\test_room</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
