@@ -55,8 +55,15 @@ alarm[0] = room_speed;
             <kind>1</kind>
             <string>/// when alarm rings, spawn object
 
-instance_create(room_width/2, room_height/3, obj_Ready);
-instance_destroy();
+if ((global.setNum-1)%5 != 0 &amp;&amp; global.setNum != 0)    {
+    instance_create(room_width/2, room_height/3, obj_Ready);
+    instance_destroy();
+} else if ((global.setNum-1)%5 == 0) {
+    global.level += 1;
+    // create instance of score generator
+    instance_create(x, y-100, obj_score);
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>

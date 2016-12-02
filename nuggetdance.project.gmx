@@ -51,11 +51,15 @@
     <object>objects\obj_player_arm_right</object>
     <object>objects\obj_player_arm_left</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_Ready</object>
-    <object>objects\obj_timer</object>
+    <objects name="texts">
+      <object>objects\obj_score</object>
+      <object>objects\obj_Ready</object>
+      <object>objects\obj_timer</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_room</room>
+    <room>rooms\rm_gameOver</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>

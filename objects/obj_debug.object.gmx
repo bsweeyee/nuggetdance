@@ -88,6 +88,8 @@ kExit = keyboard_check_pressed(vk_escape);
 kIncreaseDifficulty = keyboard_check_pressed(ord('U'));
 kDecreaseDifficulty = keyboard_check_pressed(ord('J'));
 
+kChangeAccuracy = keyboard_check_pressed(ord('M'));
+
 if (!global.global_release){
 
 // Restart application
@@ -123,6 +125,10 @@ if (kDecreaseDifficulty)    {
     }
 }
 
+if (kChangeAccuracy)    {
+    global.accuracy *= -1;
+}
+
 //close application
 if (kExit)
 game_end();
@@ -153,6 +159,7 @@ game_end();
             <string>/// print count of object demo
 
 if (!global.global_release)    {
+    draw_set_halign(fa_left);
     if (instance_exists(obj_demo))  {
         draw_text(x_debug + 10, y_debug+10, "count: " + string(obj_demo.count));
         draw_text(x_debug + 10, y_debug +30, "left: " +  string(global.demoMoveLeft[obj_demo.count]));
@@ -165,6 +172,7 @@ if (!global.global_release)    {
     
     if (instance_exists(obj_controller))    {
         draw_text(x_debug + 10, y_debug + 50, "difficulty: " + string(global.difficulty));
+        
     }
 }
 </string>

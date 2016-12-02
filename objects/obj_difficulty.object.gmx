@@ -38,6 +38,37 @@ if (global.level &gt;= 3 &amp;&amp; global.level &lt;= 6)   {
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// use this space to spawn stuff if difficulty at medium
+
+if (global.difficulty == 1) {
+    if (Chance(80)) {
+        // mirror mode code
+    }
+    
+    if (Chance(30))  {
+        // spawn distraction object
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
