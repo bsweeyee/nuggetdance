@@ -55,6 +55,7 @@ messageRight = "nothing";
             <string>/// generate list
 
 global.numDemoMoves = generateNumMoves(global.difficulty);
+global.totalmoves += global.numDemoMoves;
 prevLeft = -1;
 prevRight = -1;
 

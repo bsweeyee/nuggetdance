@@ -25,45 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///initialize parameters
-is_changed = false;
-global.numPlayerMoves = 0;
-current_left = 0
-current_right = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///record dance move
-if(global.player_move_num_left + global.player_move_num_right != 0){
-    current_left = global.player_move_num_left;
-    current_right = global.player_move_num_right;
-    if(global.numPlayerMoves &lt; global.numDemoMoves){
-        if (current_left == global.demoMoveLeft[global.numPlayerMoves])
-        and (current_right == global.demoMoveRight[global.numPlayerMoves])
-            global.hits += 1;
-    }
-    global.numPlayerMoves += 1;
-}
-is_changed = false;
+            <string>///initialise parameters
+global.hits = 0;
+global.totalmoves = 0;
+global.accuracy = 0;
+resetScore = false;
 </string>
           </argument>
         </arguments>
@@ -86,18 +52,60 @@ is_changed = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///check if dance moves changed
-if not is_changed {
-    if (global.player_move_num_left + global.player_move_num_right != 0)
-     and (global.player_move_num_left != current_left  or global.player_move_num_right != current_right) {
-        is_changed = true;
-        alarm[0] = room_speed/2;
-    }
+            <string>///update accuracy
+global.accuracy = global.hits/global.totalmoves * 100;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///reset score
+if(resetScore){
+    global.hits = 0;
+    global.totalmoves = 0;
+    resetScore = false;
 }
-
-if global.numPlayerMoves == array_length_1d(global.demoMoveRight){
-    instance_destroy();
-}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///draw accuracy, hits, total
+draw_text(x,y,string(global.accuracy) + "%");
+draw_text(x,y+20,"hits: " + string(global.hits));
+draw_text(x,y+40,"total: " + string(global.totalmoves));
 
 </string>
           </argument>
