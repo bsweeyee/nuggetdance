@@ -38,6 +38,7 @@
   </scripts>
   <objects name="objects">
     <objects name="controllers">
+      <object>objects\obj_dancerecorder</object>
       <object>objects\obj_player_move</object>
       <object>objects\obj_debug</object>
       <object>objects\obj_controller</object>
