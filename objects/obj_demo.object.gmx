@@ -54,17 +54,17 @@ messageRight = "nothing";
             <kind>1</kind>
             <string>/// generate list
 
-numOfMoves = generateNumMoves(global.difficulty);
+global.numDemoMoves = generateNumMoves(global.difficulty);
 prevLeft = -1;
 prevRight = -1;
 
-for (var i=0; i&lt;numOfMoves; i++)    {
+for (var i=0; i&lt;global.numDemoMoves; i++)    {
     var left = 0;
     var right = 0;
 
     while ((left == 0 &amp;&amp; right == 0) || (prevLeft == left &amp;&amp; prevRight == right))   {
-        left = generateMoveList(global.difficulty, numOfMoves);
-        right = generateMoveList(global.difficulty, numOfMoves);
+        left = generateMoveList(global.difficulty, global.numDemoMoves);
+        right = generateMoveList(global.difficulty, global.numDemoMoves);
     }
     prevLeft = left;
     prevRight = right;
@@ -147,7 +147,7 @@ alarm[0] = room_speed;
           <argument>
             <kind>1</kind>
             <string>///when count is maximum, destroy
-if (count == numOfMoves-1)    {
+if (count == global.numDemoMoves-1)    {
     with (right_arm) {
         instance_destroy();
     }

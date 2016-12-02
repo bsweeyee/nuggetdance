@@ -41,6 +41,7 @@
       <object>objects\obj_player_move</object>
       <object>objects\obj_debug</object>
       <object>objects\obj_controller</object>
+      <object>objects\obj_difficulty</object>
     </objects>
     <object>objects\obj_demo</object>
     <object>objects\obj_demo_arm_left</object>
