@@ -187,12 +187,12 @@ alarm[1] = room_speed*1.5;
 
 if (isDrawScoreString)  {
     draw_set_halign(fa_center);
-    draw_text_transformed(x, y - 60, scoreString, 2, 2, 0);
+    draw_text_transformed(x, y - 60, scoreString, 1, 1, 0);
 }
 
 if (isDrawScore)    {
     draw_set_halign(fa_center);
-    draw_text_transformed(x, y, string(global.accuracy), 2, 2, 0);
+    draw_text_transformed(x, y, string(global.accuracy), 1, 1, 0);
 }
 
 if (isDrawVerdict)  {
@@ -200,16 +200,16 @@ if (isDrawVerdict)  {
     obj_judge_msg.image_alpha = 1;
     obj_judge_msg.alarm[0] = room_speed/2;
     if (global.accuracy &gt; 50)   {
-        draw_text_transformed(x, y + 60, pass, 2, 2, 0);
+        draw_text_transformed(x, y + 60, pass, 1, 1, 0);
     } else  {
-        draw_text_transformed(x, y + 60, fail, 2, 2, 0);
+        draw_text_transformed(x, y + 60, fail, 1, 1, 0);
     }
 }
 
 if (isDrawNext) {
     draw_set_halign(fa_center);
-    draw_text_transformed(x, y, getReady_1, 2, 2, 0);
-    draw_text_transformed(x, y + 60, getReady_2, 2, 2, 0);   
+    draw_text_transformed(x, y, getReady_1, 1, 1, 0);
+    draw_text_transformed(x, y + 60, getReady_2, 1, 1, 0);   
 }
 
 draw_set_font(-1);
