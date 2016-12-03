@@ -48,8 +48,9 @@ image_alpha = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create up spotlight
+            <string>///create up spotlight and judge dark
 instance_create(0,0,obj_up_spotlight);
+instance_create(0,0,obj_judge_dark);
 </string>
           </argument>
         </arguments>
