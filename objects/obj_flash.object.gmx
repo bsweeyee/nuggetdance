@@ -111,6 +111,7 @@ if (room == test_room)  {
 if hits != global.hits{
     hits = global.hits;
     //draw sprite
+    audio_play_sound(snd_correct, 1, false);
     image_alpha = 1;
     alarm[0] = fade_speed;
 }
