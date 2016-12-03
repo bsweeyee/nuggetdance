@@ -83,6 +83,7 @@ instance_destroy();
             <kind>1</kind>
             <string>/// change message to go
 message = go;
+audio_stop_sound(snd_crowd);
 alarm[2] = room_speed*3;
 </string>
           </argument>
@@ -109,6 +110,7 @@ alarm[2] = room_speed*3;
             <string>/// play sound here
 alarm[1] = room_speed*3;
 audio_play_sound(snd_cheer, 0, false);
+
 </string>
           </argument>
         </arguments>

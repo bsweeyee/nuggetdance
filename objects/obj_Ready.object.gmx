@@ -30,7 +30,7 @@ set = "Set " + string(global.setNum);
 ready = "Ready...";
 dance = "DANCE!";
 
-alarm[0] = room_speed;
+alarm[0] = room_speed*2;
 message = set;
 </string>
           </argument>
@@ -80,7 +80,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>message = dance;
-alarm[2] = room_speed*1.5;
+alarm[2] = room_speed*1.3;
 </string>
           </argument>
         </arguments>
@@ -104,7 +104,8 @@ alarm[2] = room_speed*1.5;
           <argument>
             <kind>1</kind>
             <string>message = ready
-alarm[1] = room_speed*1.5;
+audio_play_sound(snd_beats, 0, false);
+alarm[1] = room_speed*1.3;
 </string>
           </argument>
         </arguments>
