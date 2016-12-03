@@ -56,6 +56,7 @@ message = set;
             <kind>1</kind>
             <string>///destroy object
 global.spawnDemo = true;
+obj_player.isSpotlightOn = true;
 instance_destroy();
 </string>
           </argument>

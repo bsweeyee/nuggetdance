@@ -35,8 +35,14 @@
     <sprite>sprites\spr_player_body_1</sprite>
     <sprite>sprites\spr_player_legs_1</sprite>
     <sprite>sprites\spr_correct_flash</sprite>
+    <sprite>sprites\spr_spotlight2</sprite>
+    <sprite>sprites\spr_spotlight1</sprite>
+    <sprite>sprites\spr_top_spotligjt</sprite>
+    <sprite>sprites\spr_up_spotlight</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\generateMoveList.gml</script>
@@ -63,6 +69,8 @@
     <object>objects\obj_player_arm_left</object>
     <object>objects\obj_player_arm_right</object>
     <object>objects\obj_player_legs</object>
+    <object>objects\obj_top_spotlight</object>
+    <object>objects\obj_spotlight</object>
     <object>objects\obj_player</object>
     <object>objects\obj_flash</object>
     <objects name="texts">
