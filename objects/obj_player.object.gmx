@@ -102,18 +102,6 @@ alarm[0] = bouncespeed;
           <argument>
             <kind>1</kind>
             <string>///bounce
-<<<<<<< HEAD
-down = !down;
-if(down){
-    y += height;
-    obj_player_legs.sprite_index = spr_player_legs_1;
-    }
-else {
-    y -= height;
-    obj_player_legs.sprite_index = spr_player_legs;
-    }
-    
-=======
 if(isSpotlightOn){
     down = !down;
     obj_up_spotlight.isOn = !obj_up_spotlight.isOn;
@@ -127,8 +115,7 @@ if(isSpotlightOn){
         obj_player_legs.sprite_index = spr_player_legs;
         obj_spotlight.sprite_index = spr_spotlight1;
         }
-}        
->>>>>>> added up spotlight
+}
 alarm[0] = bouncespeed;
 </string>
           </argument>
