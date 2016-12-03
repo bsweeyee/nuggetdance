@@ -19,7 +19,7 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -29,6 +29,7 @@
 down = false;
 bouncespeed = room_speed/5;
 height = 10;
+isSpotlightOn = false;
 </string>
           </argument>
         </arguments>
@@ -49,11 +50,13 @@ height = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///load arms and legs and flash
+            <string>///load player objects
 instance_create(x, y, obj_player_arm_right);
 instance_create(x, y, obj_player_arm_left);
 instance_create(x, y, obj_player_legs);
 instance_create(x, y, obj_flash);
+instance_create(0, 0, obj_spotlight);
+instance_create(0, 0, obj_top_spotlight);
 </string>
           </argument>
         </arguments>
