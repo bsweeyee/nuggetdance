@@ -197,6 +197,8 @@ if (isDrawScore)    {
 
 if (isDrawVerdict)  {
     draw_set_halign(fa_center);
+    obj_judge_msg.image_alpha = 1;
+    obj_judge_msg.alarm[0] = room_speed/2;
     if (global.accuracy &gt; 50)   {
         draw_text_transformed(x, y + 60, pass, 2, 2, 0);
     } else  {

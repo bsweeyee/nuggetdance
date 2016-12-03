@@ -8,6 +8,7 @@
     <sound>sound\snd_crowd</sound>
     <sound>sound\snd_cheer</sound>
     <sound>sound\snd_beats</sound>
+    <sound>sound\snd_correct</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -40,6 +41,9 @@
     <sprite>sprites\spr_player_legs_1</sprite>
     <sprite>sprites\spr_correct_flash</sprite>
     <sprite>sprites\spr_demo_body</sprite>
+    <sprite>sprites\spr_msg_so_close</sprite>
+    <sprite>sprites\spr_msg_close_enough</sprite>
+    <sprite>sprites\spr_judges_dark</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -86,6 +90,7 @@
       <object>objects\obj_Open</object>
       <object>objects\obj_Close</object>
     </objects>
+    <object>objects\obj_judge_msg</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_room</room>

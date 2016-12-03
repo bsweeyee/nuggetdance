@@ -17,6 +17,7 @@ instance_create(0, 0, obj_debug);
 instance_create(0, 0, obj_Open);
 instance_create(0, 0, obj_player_move);
 instance_create(0, 0, obj_scorecounter);
+instance_create(0, 0, obj_judge_msg);
 instance_create(615,640, obj_player);
 
 
