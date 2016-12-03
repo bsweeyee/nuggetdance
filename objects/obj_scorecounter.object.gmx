@@ -103,10 +103,11 @@ if(resetScore){
           <argument>
             <kind>1</kind>
             <string>///draw accuracy, hits, total
+/*
 draw_text(x,y,string(global.accuracy) + "%");
 draw_text(x,y+20,"hits: " + string(global.hits));
 draw_text(x,y+40,"total: " + string(global.totalmoves));
-
+*/
 </string>
           </argument>
         </arguments>
