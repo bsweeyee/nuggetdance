@@ -28,6 +28,9 @@
     <sprite>sprites\spr_player_arm_right0</sprite>
     <sprite>sprites\spr_player_arm_right1</sprite>
     <sprite>sprites\spr_player_arm_right2</sprite>
+    <sprite>sprites\spr_player_body_1</sprite>
+    <sprite>sprites\spr_player_legs_1</sprite>
+    <sprite>sprites\spr_correct_flash</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -54,6 +57,7 @@
     <object>objects\obj_player_arm_right</object>
     <object>objects\obj_player_legs</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_flash</object>
     <objects name="texts">
       <object>objects\obj_score</object>
       <object>objects\obj_Ready</object>
