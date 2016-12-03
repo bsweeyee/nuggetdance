@@ -77,6 +77,7 @@
     <object>objects\obj_player_legs</object>
     <object>objects\obj_up_spotlight</object>
     <object>objects\obj_top_spotlight</object>
+    <object>objects\obj_judge_dark</object>
     <object>objects\obj_spotlight</object>
     <object>objects\obj_player</object>
     <object>objects\obj_flash</object>

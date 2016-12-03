@@ -197,13 +197,14 @@ if (isDrawScore)    {
 
 if (isDrawVerdict)  {
     draw_set_halign(fa_center);
-    obj_judge_msg.image_alpha = 1;
-    obj_judge_msg.alarm[0] = room_speed/2;
     if (global.accuracy &gt; 50)   {
         draw_text_transformed(x, y + 60, pass, 1, 1, 0);
     } else  {
         draw_text_transformed(x, y + 60, fail, 1, 1, 0);
+        obj_judge_msg.isCloseEnough = false;
     }
+    obj_judge_msg.image_alpha = 1;
+    obj_judge_msg.alarm[0] = room_speed/2;
 }
 
 if (isDrawNext) {
