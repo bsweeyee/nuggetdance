@@ -110,10 +110,12 @@ if (room == rm_gameOver)    {
 if (room == test_room)  {
 if hits != global.hits{
     hits = global.hits;
+    if(hits != 0){
     //draw sprite
     audio_play_sound(snd_correct, 1, false);
     image_alpha = 1;
     alarm[0] = fade_speed;
+    }
 }
 }
 </string>
