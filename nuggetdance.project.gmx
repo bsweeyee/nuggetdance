@@ -69,6 +69,7 @@
     <object>objects\obj_player_arm_left</object>
     <object>objects\obj_player_arm_right</object>
     <object>objects\obj_player_legs</object>
+    <object>objects\obj_up_spotlight</object>
     <object>objects\obj_top_spotlight</object>
     <object>objects\obj_spotlight</object>
     <object>objects\obj_player</object>
