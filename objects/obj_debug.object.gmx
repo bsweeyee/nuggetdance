@@ -92,8 +92,8 @@ kChangeAccuracy = keyboard_check_pressed(ord('M'));
 
 kActivateClose = keyboard_check_pressed(ord('G'));
 
-kIncreaseDifficulty = keyboard_check_pressed(ord('Y'));
-kDecreaseDifficulty = keyboard_check_pressed(ord('H'));
+kIncreaseLevel = keyboard_check_pressed(ord('Y'));
+kDecreaseLevel = keyboard_check_pressed(ord('H'));
 
 if (!global.global_release){
 
@@ -126,12 +126,12 @@ if (kDecreaseSetNum)    {
     global.setNum -= 1;
 }
 
-if (kIncreaseDifficulty) {
-    global.difficulty += 1;
+if (kIncreaseLevel) {
+    global.level += 1;
 } 
 
-if (kDecreaseDifficulty) {
-    global.difficulty -= 1;
+if (kDecreaseLevel) {
+    global.level -= 1;
 }
 
 if (kChangeAccuracy)    {
@@ -189,6 +189,9 @@ if (!global.global_release)    {
     
     draw_text(x_debug + 10, y_debug + 70, "set number: " + string(global.setNum));
     draw_text(x_debug + 10, y_debug + 90, "level: " + string(global.level));
+    draw_set_color(c_white);
+    draw_text(x_debug + 10, y_debug + 110, "numDemoMoves: " + string(global.numDemoMoves));
+    draw_set_color(c_black);
 }
 </string>
           </argument>

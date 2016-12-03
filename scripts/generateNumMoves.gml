@@ -15,6 +15,10 @@ switch (difficulty) {
     case 2:
     moves = irandom_range(7, 10);
     break;
+    
+    case 3:
+    moves = irandom_range(7, 10);
+    break;
 }
 
 return moves;

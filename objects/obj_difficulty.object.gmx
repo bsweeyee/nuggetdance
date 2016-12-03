@@ -32,7 +32,7 @@ if (global.level &gt;= 2 &amp;&amp; global.level &lt;= 4)   {
 } else if (global.level &gt;= 5 &amp;&amp; global.level &lt;= 6)   {
     global.difficulty = 2;
 } else if (global.level &gt;= 7)  {
-    global.difficulty = 3
+    global.difficulty = 3;
 }
 </string>
           </argument>

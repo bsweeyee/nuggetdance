@@ -207,6 +207,8 @@ if (global.count == global.numDemoMoves)    {
         instance_destroy();
     }
     instance_create(x, y, obj_timer);
+    audio_stop_sound(snd_bgm);
+    audio_play_sound(snd_cheer, 0, false);
     global.setNum += 1;
     obj_player.isSpotlightOn = false;
     instance_destroy();

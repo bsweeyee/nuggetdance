@@ -32,6 +32,13 @@ switch (difficulty) {
     }
     break;
     
+    case 3:
+    if (Chance(90)) {
+        move = irandom_range(5, 8);
+    } else  {
+        move = irandom_range(0, 4);
+    }
+    break;
 }
 
 return move;

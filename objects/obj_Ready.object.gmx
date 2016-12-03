@@ -57,6 +57,7 @@ message = set;
             <string>///destroy object
 global.spawnDemo = true;
 obj_player.isSpotlightOn = true;
+audio_play_sound(snd_bgm, 0, false);
 instance_destroy();
 </string>
           </argument>
