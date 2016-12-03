@@ -27,6 +27,10 @@
     <sprite>sprites\spr_player_arm_left6</sprite>
     <sprite>sprites\spr_player_arm_left7</sprite>
     <sprite>sprites\spr_player_arm_left8</sprite>
+    <sprite>sprites\spr_spotlight1</sprite>
+    <sprite>sprites\spr_spotlight2</sprite>
+    <sprite>sprites\spr_top_spotligjt</sprite>
+    <sprite>sprites\spr_up_spotlight</sprite>
     <sprite>sprites\spr_player_arm_left9</sprite>
     <sprite>sprites\spr_player_arm_left0</sprite>
     <sprite>sprites\spr_player_arm_right0</sprite>
@@ -35,10 +39,6 @@
     <sprite>sprites\spr_player_body_1</sprite>
     <sprite>sprites\spr_player_legs_1</sprite>
     <sprite>sprites\spr_correct_flash</sprite>
-    <sprite>sprites\spr_spotlight2</sprite>
-    <sprite>sprites\spr_spotlight1</sprite>
-    <sprite>sprites\spr_top_spotligjt</sprite>
-    <sprite>sprites\spr_up_spotlight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

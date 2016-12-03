@@ -29,7 +29,6 @@
 down = false;
 bouncespeed = room_speed/5;
 height = 10;
-isSpotlightOn = false;
 </string>
           </argument>
         </arguments>
@@ -50,13 +49,11 @@ isSpotlightOn = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///load player objects
+            <string>///load arms and legs and flash
 instance_create(x, y, obj_player_arm_right);
 instance_create(x, y, obj_player_arm_left);
 instance_create(x, y, obj_player_legs);
 instance_create(x, y, obj_flash);
-instance_create(0, 0, obj_spotlight);
-instance_create(0, 0, obj_top_spotlight);
 </string>
           </argument>
         </arguments>
@@ -102,19 +99,16 @@ alarm[0] = bouncespeed;
           <argument>
             <kind>1</kind>
             <string>///bounce
-if(isSpotlightOn){
-    down = !down;
-    if(down){
-        y += height;
-        obj_player_legs.sprite_index = spr_player_legs_1;
-        obj_spotlight.sprite_index = spr_spotlight2;
-        }
-    else {
-        y -= height;
-        obj_player_legs.sprite_index = spr_player_legs;
-        obj_spotlight.sprite_index = spr_spotlight1;
-        }
-}        
+down = !down;
+if(down){
+    y += height;
+    obj_player_legs.sprite_index = spr_player_legs_1;
+    }
+else {
+    y -= height;
+    obj_player_legs.sprite_index = spr_player_legs;
+    }
+    
 alarm[0] = bouncespeed;
 </string>
           </argument>

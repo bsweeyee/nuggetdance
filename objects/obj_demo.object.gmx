@@ -162,7 +162,6 @@ if (global.count == global.numDemoMoves)    {
     }
     instance_create(x, y, obj_timer);
     global.setNum += 1;
-    obj_player.isSpotlightOn = false;
     instance_destroy();
 }
 </string>

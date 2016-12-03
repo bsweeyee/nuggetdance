@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string> //timer value
 
-message[0] = "Great work, let's take a short break!";
-message[1] = "Nuggets in... Nuggets out...";
-message[2] = "";
+message[0] = "Great work!" 
+message[1] = "Let's take a short break!";
 
-scoreMessage = "Wonderful! Let's take a look at some scores!";
+scoreMessage_1 = "Wonderful!"
+scoreMessage_2 = "Let's take a look at some scores!";
 
 draw = true;
 
@@ -126,9 +126,11 @@ if (draw)   {
     draw_set_font(font_Kris);
     draw_set_halign(fa_center);
     if ((global.setNum-1)%5 == 0)   {
-        draw_text_transformed(x, y, scoreMessage, 2, 2, 0);
+        draw_text_transformed(x, y - 90, scoreMessage_1, 2, 2, 0);
+        draw_text_transformed(x, y - 30, scoreMessage_2, 2, 2, 0);
     } else  {
-        draw_text_transformed(x, y, message[0], 2, 2, 0);
+        draw_text_transformed(x, y - 90, message[0], 2, 2, 0);
+        draw_text_transformed(x, y - 30, message[1], 2, 2, 0);
     }
     draw_set_font(-1);
 }

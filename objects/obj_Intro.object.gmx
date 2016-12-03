@@ -27,10 +27,13 @@
             <kind>1</kind>
             <string>///messages and alarm
 
-awesome = "Awesome! Are you ready to dance?";
-go = "Alright then, Let's go go nuggets!!!";
+awesome_1 = "Awesome!" 
+awesome_2 = "Are you ready to dance?";
+go_1 = "Alright then," 
+go_2 = "Let's go go nuggets!!!";
 
-message = awesome;
+message_1 = awesome_1;
+message_2 = awesome_2;
 
 alarm[0] = room_speed*(1/3);
 </string>
@@ -82,7 +85,8 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>/// change message to go
-message = go;
+message_1 = go_1;
+message_2 = go_2;
 audio_stop_sound(snd_crowd);
 alarm[2] = room_speed*3;
 </string>
@@ -137,7 +141,8 @@ audio_play_sound(snd_cheer, 0, false);
 
 draw_set_font(font_Kris);
 draw_set_halign(fa_center);
-draw_text_transformed(x, y, message, 2, 2, 0);
+draw_text_transformed(x, y - 90, message_1, 2, 2, 0);
+draw_text_transformed(x, y - 30, message_2, 2, 2, 0);
 draw_set_font(-1);
 
 </string>

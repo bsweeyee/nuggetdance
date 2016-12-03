@@ -31,7 +31,8 @@ scoreString = "Your Score"
 fail = "SO CLOSE";
 pass = "CLOSE ENOUGH";
 
-getReady = "Get ready for the next level!";
+getReady_1 = "Get ready for" 
+getReady_2 = "the next level!";
 
 isDrawScoreString = true;
 isDrawScore = false;
@@ -183,26 +184,27 @@ alarm[1] = room_speed*1.5;
 
 if (isDrawScoreString)  {
     draw_set_halign(fa_center);
-    draw_text_transformed(x, y, scoreString, 2, 2, 0);
+    draw_text_transformed(x, y - 60, scoreString, 2, 2, 0);
 }
 
 if (isDrawScore)    {
     draw_set_halign(fa_center);
-    draw_text_transformed(x, y + 60, string(global.accuracy), 2, 2, 0);
+    draw_text_transformed(x, y, string(global.accuracy), 2, 2, 0);
 }
 
 if (isDrawVerdict)  {
     draw_set_halign(fa_center);
     if (global.accuracy &gt; 50)   {
-        draw_text_transformed(x, y + 120, pass, 2, 2, 0);
+        draw_text_transformed(x, y + 60, pass, 2, 2, 0);
     } else  {
-        draw_text_transformed(x, y + 120, fail, 2, 2, 0);
+        draw_text_transformed(x, y + 60, fail, 2, 2, 0);
     }
 }
 
 if (isDrawNext) {
     draw_set_halign(fa_center);
-    draw_text_transformed(x, y + 100, getReady, 2, 2, 0);   
+    draw_text_transformed(x, y, getReady_1, 2, 2, 0);
+    draw_text_transformed(x, y + 60, getReady_2, 2, 2, 0);   
 }
 
 draw_set_font(-1);
