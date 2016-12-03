@@ -15,6 +15,10 @@
 instance_create(0, 0, obj_controller);
 instance_create(0, 0, obj_debug);
 instance_create(0, 0, obj_Open);
+instance_create(0, 0, obj_player_move);
+instance_create(0, 0, obj_scorecounter);
+instance_create(615,640, obj_player);
+
 
 //instance_create(room_width/2, room_height/3, obj_Ready);
 //instance_create(0, 0, obj_difficulty);</code>
