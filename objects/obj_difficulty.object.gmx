@@ -27,12 +27,12 @@
             <kind>1</kind>
             <string>/// sets the difficulty level of game
 
-if (global.level &gt;= 3 &amp;&amp; global.level &lt;= 6)   {
+if (global.level &gt;= 2 &amp;&amp; global.level &lt;= 4)   {
     global.difficulty = 1;
-} else if (global.level &gt;= 7)   {
+} else if (global.level &gt;= 5 &amp;&amp; global.level &lt;= 6)   {
     global.difficulty = 2;
-} else if (global.level &gt;= 0 &amp;&amp; global.level &lt;= 2)  {
-    global.difficulty = 0
+} else if (global.level &gt;= 7)  {
+    global.difficulty = 3
 }
 </string>
           </argument>

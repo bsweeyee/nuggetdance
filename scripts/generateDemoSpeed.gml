@@ -14,8 +14,13 @@ switch (difficulty) {
     break;
         
     case 2:
+    timer = room_speed * 1.2;
+    break;
+    
+    case 3:
     timer = room_speed * 1;
     break;
+    
 }   
 
 return timer;
