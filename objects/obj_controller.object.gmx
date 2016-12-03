@@ -109,7 +109,7 @@ isOpened = false;
           <argument>
             <kind>1</kind>
             <string>/// create demo
-instance_create(room_width/2, room_height/3, obj_Ready);
+instance_create(room_width/2, room_height/3, obj_Intro);
 instance_create(0, 0, obj_difficulty);
 </string>
           </argument>

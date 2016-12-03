@@ -90,12 +90,12 @@ instance_destroy();
             <kind>1</kind>
             <string>///check if fail or pass and change rooms depending on which state
 
-if (global.accuracy &gt; 50)   {
+if (global.accuracy &gt;= 50)   {
     isDrawNext = true;
     isDrawScoreString = false;
     isDrawScore = false;
     isDrawVerdict = false;
-    alarm[3] = room_speed;
+    alarm[3] = room_speed*2;
 } else  {
     // go to gameover room
     instance_create(0, 0, obj_Close);
@@ -179,30 +179,33 @@ alarm[1] = room_speed*1.5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>draw_set_font(font_Kris);
+
 if (isDrawScoreString)  {
     draw_set_halign(fa_center);
-    draw_text(x, y, scoreString);
+    draw_text_transformed(x, y, scoreString, 2, 2, 0);
 }
 
 if (isDrawScore)    {
     draw_set_halign(fa_center);
-    draw_text(x, y + 30, string(global.accuracy));
+    draw_text_transformed(x, y + 60, string(global.accuracy), 2, 2, 0);
 }
 
 if (isDrawVerdict)  {
     draw_set_halign(fa_center);
     if (global.accuracy &gt; 50)   {
-        draw_text(x, y + 60, pass);
+        draw_text_transformed(x, y + 120, pass, 2, 2, 0);
     } else  {
-        draw_text(x, y + 60, fail);
+        draw_text_transformed(x, y + 120, fail, 2, 2, 0);
     }
 }
 
 if (isDrawNext) {
     draw_set_halign(fa_center);
-    draw_text(x, y + 100, getReady);   
+    draw_text_transformed(x, y + 100, getReady, 2, 2, 0);   
 }
+
+draw_set_font(-1);
 </string>
           </argument>
         </arguments>

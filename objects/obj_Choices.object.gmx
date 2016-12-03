@@ -204,7 +204,17 @@ if (quitCount &gt;= room_speed)    {
         quitAlpha = 1;
     else if (quitAlpha == 1 &amp;&amp; blink)
         quitAlpha = 0;
-        
+    
+    flash = instance_create(room_width*(4/5), room_height*(2/3), obj_flash);
+    with (flash)    {
+        image_xscale = 0.5;
+        image_yscale = 0.5;
+        x = room_width*(4/5);
+        y = room_height*(2/3);
+        image_alpha = 1;
+        alarm[0] = 1;
+    }
+    
     if (hasQuit)    {
         alarm[0] = room_speed/3;
     }
@@ -217,6 +227,16 @@ if (contCount &gt;= room_speed) {
         contAlpha = 1;
     else if (contAlpha == 1 &amp;&amp; blink)
         contAlpha = 0;    
+    
+    flash = instance_create(room_width*(1/5), room_height*(2/3), obj_flash);
+    with (flash)    {
+        image_xscale = 0.5;
+        image_yscale = 0.5;
+        x = room_width*(1/5);
+        y = room_height*(2/3);
+        image_alpha = 1;
+        alarm[0] = 1;
+    }
     
     if (hasCont)    {
         alarm[1] = room_speed/3;
@@ -255,11 +275,19 @@ draw_set_font(font_Kris);
 
 draw_set_color(c_white);
 
-draw_text_ext_transformed_color(room_width*(1/4), room_height*(2/3), danceAgain, -1, -1, contSize, contSize, 0, c_white, c_white, c_white, c_white, contAlpha); 
+draw_set_alpha(contAlpha);
 
-draw_text_ext_transformed_color(room_width*(3/4), room_height*(2/3), Quit, -1, -1, quitSize, quitSize, 0, c_white, c_white, c_white, c_white, quitAlpha);
+draw_text_transformed(room_width*(1/5), room_height*(2/3), danceAgain, contSize, contSize, 0);
+
+draw_set_alpha(quitAlpha);
+
+draw_text_transformed(room_width*(4/5), room_height*(2/3), Quit, quitSize, quitSize, 0);
+
+draw_set_alpha(1);
 
 draw_set_color(c_black);
+
+draw_set_font(-1);
 </string>
           </argument>
         </arguments>

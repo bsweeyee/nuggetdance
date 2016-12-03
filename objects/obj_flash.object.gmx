@@ -75,8 +75,15 @@ y = obj_player.y;
           <argument>
             <kind>1</kind>
             <string>///draw sprite
+if (room == test_room)  {
 if image_alpha &gt; 0 image_alpha -= 0.1;
 alarm[0] = fade_speed;
+}
+
+if (room == rm_gameOver)    {
+    if image_alpha &gt; 0 image_alpha -= 0.1;
+    alarm[0] = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -100,11 +107,13 @@ alarm[0] = fade_speed;
           <argument>
             <kind>1</kind>
             <string>///if timer up check global.hits if changed
+if (room == test_room)  {
 if hits != global.hits{
     hits = global.hits;
     //draw sprite
     image_alpha = 1;
     alarm[0] = fade_speed;
+}
 }
 </string>
           </argument>
