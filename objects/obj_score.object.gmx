@@ -66,6 +66,9 @@ alarm[0] = room_speed;
             <kind>1</kind>
             <string>// create object ready and destroy itself
 instance_create(x, y+100, obj_Ready);
+if (instance_exists(obj_scorecounter))  {
+    obj_scorecounter.resetScore = true;
+}
 instance_destroy();
 </string>
           </argument>

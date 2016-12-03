@@ -51,7 +51,7 @@ y_debug = view_yview[0] + 10;
           <argument>
             <kind>1</kind>
             <string>/// global release
-global.global_release = false;
+global.global_release = true;
 </string>
           </argument>
         </arguments>
