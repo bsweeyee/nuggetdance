@@ -107,11 +107,13 @@ if(isSpotlightOn){
     obj_up_spotlight.isOn = !obj_up_spotlight.isOn;
     if(down){
         y += height;
+        obj_demo.y += obj_demo.height;
         obj_player_legs.sprite_index = spr_player_legs_1;
         obj_spotlight.sprite_index = spr_spotlight2;
         }
     else {
         y -= height;
+        obj_demo.y -= obj_demo.height;
         obj_player_legs.sprite_index = spr_player_legs;
         obj_spotlight.sprite_index = spr_spotlight1;
         }
