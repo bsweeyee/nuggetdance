@@ -58,8 +58,8 @@ niceTry = 0;
 quitSize = 1;
 contSize = 1;
 
-quitAlpha = 1;
-contAlpha = 1;
+quitAlpha = 2;
+contAlpha = 2;
 
 hasQuit = true;
 hasCont = true;
@@ -141,30 +141,30 @@ game_end();
           <argument>
             <kind>1</kind>
             <string>///check left or right button press
-kContinue = (keyboard_check(ord('A')) or keyboard_check(vk_left));
-kQuit = (keyboard_check(vk_right) or keyboard_check(ord('D')));
+kContinue = keyboard_check(ord('A'));
+kQuit = keyboard_check(vk_right);
 
 if (kContinue and !kQuit)  {
     quitCount = 0;
     niceTry = 0;
     contCount += 1;
-    quitSize = 1;
-    contSize = 2;
+    quitSize = 2;
+    contSize = 2.5;
 }
 
 if (!kContinue and kQuit)   {
     contCount = 0;
     niceTry = 0;
     quitCount += 1; 
-    contSize = 1;
-    quitSize = 2;   
+    contSize = 2;
+    quitSize = 2.5;   
 }
 
 if (kContinue and kQuit)   {
     contCount = 0;
     quitCount = 0;
-    contSize = 2;
-    quitSize = 2;
+    contSize = 2.5;
+    quitSize = 2.5;
     niceTry += 1;
 }
 
@@ -172,8 +172,8 @@ if (!kContinue and !kQuit)  {
     contCount = 0;
     quitCount = 0;
     niceTry = 0;
-    quitSize = 1;
-    contSize = 1;
+    quitSize = 2;
+    contSize = 2;
 }
 
    
@@ -251,11 +251,13 @@ if (contCount &gt;= room_speed) {
 //set fonts for these 
 draw_set_halign(fa_center);
 
+draw_set_font(font_Kris);
+
 draw_set_color(c_white);
 
-draw_text_ext_transformed_color(room_width*(1/3), room_height*(2/3), danceAgain, -1, -1, contSize, contSize, 0, c_white, c_white, c_white, c_white, contAlpha); 
+draw_text_ext_transformed_color(room_width*(1/4), room_height*(2/3), danceAgain, -1, -1, contSize, contSize, 0, c_white, c_white, c_white, c_white, contAlpha); 
 
-draw_text_ext_transformed_color(room_width*(2/3), room_height*(2/3), Quit, -1, -1, quitSize, quitSize, 0, c_white, c_white, c_white, c_white, quitAlpha);
+draw_text_ext_transformed_color(room_width*(3/4), room_height*(2/3), Quit, -1, -1, quitSize, quitSize, 0, c_white, c_white, c_white, c_white, quitAlpha);
 
 draw_set_color(c_black);
 </string>

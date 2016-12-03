@@ -40,6 +40,8 @@ global.spawnDemo = false;
 global.setNum = 1;
 
 global.level = 0;
+
+global.mirrorMode = false;
 </string>
           </argument>
         </arguments>

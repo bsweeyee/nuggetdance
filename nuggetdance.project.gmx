@@ -38,6 +38,9 @@
     <script>scripts\checkMoveType.gml</script>
     <script>scripts\generateDemoSpeed.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_Kris</font>
+  </fonts>
   <objects name="objects">
     <objects name="controllers">
       <object>objects\obj_dancerecorder</object>
@@ -58,14 +61,17 @@
       <object>objects\obj_score</object>
       <object>objects\obj_Ready</object>
       <object>objects\obj_timer</object>
+      <object>objects\obj_Choices</object>
     </objects>
-    <object>objects\obj_Close</object>
-    <object>objects\obj_Open</object>
-    <object>objects\obj_Choices</object>
+    <objects name="FX">
+      <object>objects\obj_Open</object>
+      <object>objects\obj_Close</object>
+    </objects>
+    <object>objects\obj_mirror_mode</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\test_room</room>
     <room>rooms\rm_gameOver</room>
+    <room>rooms\test_room</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
